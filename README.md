@@ -14,10 +14,12 @@
 
 ## Installation
 1. Install Redis server.
+   redis-server
+   *cd your file path
 2. Create a Python virtual environment:
     ```bash
     python -m venv venv
-    source venv\Scripts\activate
+    venv\Scripts\activate
     pip install -r requirements.txt
     ```
 3. Run FastAPI server:
