@@ -1,0 +1,167 @@
+{
+  "info": {
+    "name": "Social Media API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create User",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"user_id\": \"u1\",\n  \"username\": \"john\",\n  \"email\": \"john@example.com\",\n  \"bio\": \"Hello! I'm John\",\n  \"phone\": \"1234567890\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/user/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["user", ""]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Get User",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/user/u1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["user", "u1"]
+        }
+      }
+    },
+    {
+      "name": "Create Post",
+      "request": {
+        "method": "POST",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"post_id\": \"p1\",\n  \"user_id\": \"u1\",\n  \"content\": \"My first post!\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/post/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["post", ""]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Get User Posts",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/posts/u1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["posts", "u1"]
+        }
+      }
+    },
+    {
+      "name": "Follow User",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:8000/follow/?follower_id=u1&followee_id=u2",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["follow", ""],
+          "query": [
+            { "key": "follower_id", "value": "u1" },
+            { "key": "followee_id", "value": "u2" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Followers",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/followers/u2",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["followers", "u2"]
+        }
+      }
+    },
+    {
+      "name": "Get Following",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/following/u1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["following", "u1"]
+        }
+      }
+    },
+    {
+      "name": "Add Friend",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:8000/friend/?user_id=u1&friend_id=u2",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["friend", ""],
+          "query": [
+            { "key": "user_id", "value": "u1" },
+            { "key": "friend_id", "value": "u2" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Friends",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/friends/u1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["friends", "u1"]
+        }
+      }
+    },
+    {
+      "name": "Get Timeline",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8000/timeline/u1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["timeline", "u1"]
+        }
+      }
+    }
+  ]
+}
+
