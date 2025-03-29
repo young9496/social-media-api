@@ -31,6 +31,8 @@
 Included in `postman_collection.json`
 
 ## Run Locally or Download
+download git from https://git-scm.com/download/win
+git --version  #check for installation
 Clone the repository:
 ```bash
 git clone https://github.com/young9496/social-media-api.git
