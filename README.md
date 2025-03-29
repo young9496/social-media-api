@@ -16,16 +16,16 @@
 1. Install Redis https://redis.io/docs/install/install-stack/
 2. Install Python from https://www.python.org/downloads/
 3. Install git from https://git-scm.com/download/win
-   redis-server
 4. Download postman collection from https://www.postman.com/downloads/
-5. Create a Python virtual environment:
+5. cmd -- redis server
+6. Create a Python virtual environment:
     ```bash
     cd your file path
     python -m venv venv
     venv\Scripts\activate
     pip install -r requirements.txt
     ```
-6. Run FastAPI server:
+7. Run FastAPI server:
     ```bash
     uvicorn app.main:app --reload 
     ```
