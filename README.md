@@ -15,7 +15,6 @@
 ## Installation
 1. Install Redis server.
    redis-server
-   *cd your file path
 2. Create a Python virtual environment:
     ```bash
     python -m venv venv
