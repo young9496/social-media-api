@@ -2,17 +2,22 @@
 
 ## Features
 - Create User
-- Follow / Unfollow Users
-- Add Friends
-- Post Messages
-- View Timeline (Own + Followed Users)
+- Get User
+- Create Post
+- Get Posts
+- Follow User
+- Get Followers
+- Get Following
+- Add Friend
+- Get Friends
+- Get Timeline Posts (Own + Followed Users)
 
 ## Installation
 1. Install Redis server.
 2. Create a Python virtual environment:
     ```bash
     python -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    source venv\Scripts\activate
     pip install -r requirements.txt
     ```
 3. Run FastAPI server:
@@ -22,3 +27,8 @@
 
 ## Postman Collection
 Included in `postman_collection.json`
+
+## Run Locally or Download
+Clone the repository:
+```bash
+git clone https://github.com/young9496/social-media-api.git
